@@ -9,7 +9,7 @@ LAST_IP="127.0.0.1"
 CURRENT_IP=""
 
 while true; do
-    if [ -z "$STATIC_DNS_NAME"]; then
+    if [[ -z "$STATIC_DNS_NAME" ]]; then
       CURRENT_IP="$(curl -s http://whatismyip.akamai.com/)"
     else
       CURRENT_IP="$(ping -c 1 "$STATIC_DNS_NAME" |  grep -o  '[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*' | uniq)"
