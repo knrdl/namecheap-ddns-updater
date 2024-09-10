@@ -1,4 +1,4 @@
-FROM alpine:3.20.2
+FROM alpine:3.20.3
 
 RUN apk add --no-cache curl iputils && \
     adduser --gecos "" --no-create-home --shell /bin/false --disabled-password --uid 1000 ddns-updater
